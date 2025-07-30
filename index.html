@@ -1,830 +1,955 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Moguls - India's #1 Hotel Marketing Company</title>
-    <meta name="description"
-        content="India's #1 Hotel Marketing Company helping 1000+ hotels generate ₹10,000+ Crores in revenue. Get your Profit Velocity Blueprint today!">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internet Moguls - India's #1 Hotel Marketing Company</title>
+        <meta name="description"
+            content="India's #1 Hotel Marketing Company helping 1000+ hotels generate ₹10,000+ Crores in revenue. Get your Profit Velocity Blueprint today!">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
 
-<body>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10">
-                    <h1 class="hero-title">Internet Moguls</h1>
-                    <h2 class="hero-subtitle">India's #1 Hotel Marketing Company – Owned by Hoteliers, For Hoteliers
-                    </h2>
-                    <p class="hero-tagline">Helping 1000+ hotels create ₹10,000+ Crores in revenue – Let's unlock your
-                        profit velocity.</p>
-                    <button class="btn btn-primary btn-lg hero-cta" onclick="scrollToSection('challenges')">
-                        Pick Your Hotel Challenges
+    <body>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10">
+                        <h1 class="hero-title">Internet Moguls</h1>
+                        <h2 class="hero-subtitle">India's #1 Hotel Marketing
+                            Company – Owned by Hoteliers, For Hoteliers
+                        </h2>
+                        <p class="hero-tagline">Helping 1000+ hotels create
+                            ₹10,000+ Crores in revenue – Let's unlock your
+                            profit velocity.</p>
+                        <button class="btn btn-primary btn-lg hero-cta"
+                            onclick="scrollToSection('challenges')">
+                            Pick Your Hotel Challenges
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenges" class="py-5 bg-white" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">Pick Your Current Hotel
+                            Challenges</h2>
+                        <p class="section-subtitle">Select the challenges that
+                            are stopping your hotel from growing. We'll
+                            show you the fastest way to fix them.</p>
+                    </div>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="1">
+                            <div class="challenge-icon">
+                                <i class="fa-solid fa-hospital"></i>
+                            </div>
+                            <p class="challenge-text">Not getting enough
+                                bookings</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="2">
+                            <div class="challenge-icon">
+                                <i class="fas fa-calendar-xmark"></i>
+                            </div>
+                            <p class="challenge-text">Rooms not filling in
+                                season</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="3">
+                            <div class="challenge-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <p class="challenge-text">High dependency on
+                                OTAs</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="4">
+                            <div class="challenge-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <p class="challenge-text">Website not generating
+                                bookings</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="5">
+                            <div class="challenge-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="challenge-text">Poor reviews & ratings</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="6">
+                            <div class="challenge-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p class="challenge-text">Social media not driving
+                                revenue</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="7">
+                            <div class="challenge-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p class="challenge-text">Weak wedding & MICE
+                                leads</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="8">
+                            <div class="challenge-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <p class="challenge-text">Low repeat business</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="9">
+                            <div class="challenge-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <p class="challenge-text">No clear marketing
+                                strategy</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="challenge-card" data-challenge="10">
+                            <div class="challenge-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <p class="challenge-text">Not tracking ROI</p>
+                            <div class="challenge-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="challengesCTA" class="btn btn-primary btn-lg"
+                        disabled
+                        onclick="scrollToSection('solutions')">
+                        See My Solutions (<span id="selectedCount">0</span>
+                        selected)
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+        </section>
 
-    <!-- Challenge Section -->
-    <section id="challenges" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Pick Your Current Hotel Challenges</h2>
-                    <p class="section-subtitle">Select the challenges that are stopping your hotel from growing. We'll
-                        show you the fastest way to fix them.</p>
-                </div>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="1">
-                        <div class="challenge-icon">
-                            <i class="fa-solid fa-hospital"></i>
-                        </div>
-                        <p class="challenge-text">Not getting enough bookings</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-5 bg-light" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">Pick Your Solutions</h2>
+                        <p class="section-subtitle">We solve your hotel's growth
+                            problems with proven strategies that
+                            deliver measurable results.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="2">
-                        <div class="challenge-icon">
-                            <i class="fas fa-calendar-xmark"></i>
-                        </div>
-                        <p class="challenge-text">Rooms not filling in season</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="3">
-                        <div class="challenge-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <p class="challenge-text">High dependency on OTAs</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="4">
-                        <div class="challenge-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <p class="challenge-text">Website not generating bookings</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="5">
-                        <div class="challenge-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="challenge-text">Poor reviews & ratings</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="6">
-                        <div class="challenge-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <p class="challenge-text">Social media not driving revenue</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="7">
-                        <div class="challenge-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <p class="challenge-text">Weak wedding & MICE leads</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="8">
-                        <div class="challenge-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <p class="challenge-text">Low repeat business</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="9">
-                        <div class="challenge-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <p class="challenge-text">No clear marketing strategy</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="challenge-card" data-challenge="10">
-                        <div class="challenge-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <p class="challenge-text">Not tracking ROI</p>
-                        <div class="challenge-check">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button id="challengesCTA" class="btn btn-primary btn-lg" disabled
-                    onclick="scrollToSection('solutions')">
-                    See My Solutions (<span id="selectedCount">0</span> selected)
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions Section -->
-    <section id="solutions" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Pick Your Solutions</h2>
-                    <p class="section-subtitle">We solve your hotel's growth problems with proven strategies that
-                        deliver measurable results.</p>
-                </div>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h4 class="solution-title">Direct Booking Optimisation</h4>
-                        <p class="solution-subtitle">SEO + PPC</p>
-                        <p class="solution-desc">Increase direct bookings and reduce OTA dependency</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h4 class="solution-title">OTA & Revenue Management</h4>
-                        <p class="solution-subtitle">Rate Parity</p>
-                        <p class="solution-desc">Maximize revenue across all booking channels</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4 class="solution-title">Social Media with ROI</h4>
-                        <p class="solution-subtitle">Measurable Results</p>
-                        <p class="solution-desc">Drive bookings through strategic social presence</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h4 class="solution-title">Website Revamp</h4>
-                        <p class="solution-subtitle">Booking Engine</p>
-                        <p class="solution-desc">Convert visitors into confirmed bookings</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4 class="solution-title">Reputation Management</h4>
-                        <p class="solution-subtitle">Review Strategy</p>
-                        <p class="solution-desc">Build trust and improve online ratings</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4 class="solution-title">Wedding & MICE Marketing</h4>
-                        <p class="solution-subtitle">Event Bookings</p>
-                        <p class="solution-desc">Capture high-value event business</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4 class="solution-title">Influencer Marketing</h4>
-                        <p class="solution-subtitle">Brand Awareness</p>
-                        <p class="solution-desc">Reach new audiences authentically</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <h4 class="solution-title">Loyalty & Retention</h4>
-                        <p class="solution-subtitle">Repeat Business</p>
-                        <p class="solution-desc">Turn guests into brand ambassadors</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="solution-title">Yield Management</h4>
-                        <p class="solution-subtitle">Price Optimization</p>
-                        <p class="solution-desc">Maximize revenue per available room</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4 class="solution-title">AI-driven Automation</h4>
-                        <p class="solution-subtitle">Smart Marketing</p>
-                        <p class="solution-desc">Automate guest engagement and bookings</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-primary btn-lg" onclick="scrollToSection('process')">
-                    Book My Profit Velocity Call
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Your Profit Velocity Journey – 3 Simple Steps</h2>
-                </div>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-lg-4 text-center">
-                    <div class="process-step">
-                        <div class="step-number">01</div>
-                        <div class="step-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h4 class="step-title">Discover</h4>
-                        <p class="step-subtitle">Fill the Velocity Questionnaire</p>
-                        <p class="step-description">Tell us about your hotel's current challenges and goals</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <div class="process-step">
-                        <div class="step-number">02</div>
-                        <div class="step-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
-                        <h4 class="step-title">Schedule</h4>
-                        <p class="step-subtitle">Book your strategy call</p>
-                        <p class="step-description">Schedule a 30-minute call with our hotel marketing experts</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <div class="process-step">
-                        <div class="step-number">03</div>
-                        <div class="step-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4 class="step-title">Accelerate</h4>
-                        <p class="step-subtitle">Receive your Profit Velocity Blueprint</p>
-                        <p class="step-description">Get your customized growth plan and start seeing results</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-primary btn-lg" onclick="scrollToSection('questionnaire')">
-                    Start My 3-Step Journey
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Questionnaire Section -->
-    <section id="questionnaire" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">The Velocity Questionnaire</h2>
-                    <p class="section-subtitle">Answer a few quick questions so we can prepare your customised hotel
-                        growth plan.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="questionnaire-form">
-                        <form id="velocityForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Your Name *</label>
-                                    <input type="text" class="form-control" name="name" required
-                                        placeholder="Enter your full name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" name="email" required
-                                        placeholder="your@email.com">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" name="phone" required
-                                        placeholder="+91 XXXXX XXXXX">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Hotel Name *</label>
-                                    <input type="text" class="form-control" name="hotelName" required
-                                        placeholder="Your hotel name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Location *</label>
-                                    <input type="text" class="form-control" name="location" required
-                                        placeholder="City, State">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Monthly Revenue Range</label>
-                                    <select class="form-control" name="monthlyRevenue">
-                                        <option value="">Select range</option>
-                                        <option value="0-10L">₹0 - ₹10 Lakhs</option>
-                                        <option value="10-25L">₹10 - ₹25 Lakhs</option>
-                                        <option value="25-50L">₹25 - ₹50 Lakhs</option>
-                                        <option value="50L+">₹50 Lakhs+</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Current Marketing Challenges</label>
-                                    <textarea class="form-control" name="currentChallenges" rows="4"
-                                        placeholder="Describe your biggest marketing challenges..."></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Primary Goals for Next 12 Months</label>
-                                    <textarea class="form-control" name="primaryGoals" rows="3"
-                                        placeholder="What are your main business goals?"></textarea>
-                                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-search"></i>
                             </div>
+                            <h4 class="solution-title">Direct Booking
+                                Optimisation</h4>
+                            <p class="solution-subtitle">SEO + PPC</p>
+                            <p class="solution-desc">Increase direct bookings
+                                and reduce OTA dependency</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h4 class="solution-title">OTA & Revenue
+                                Management</h4>
+                            <p class="solution-subtitle">Rate Parity</p>
+                            <p class="solution-desc">Maximize revenue across all
+                                booking channels</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="solution-title">Social Media with
+                                ROI</h4>
+                            <p class="solution-subtitle">Measurable Results</p>
+                            <p class="solution-desc">Drive bookings through
+                                strategic social presence</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4 class="solution-title">Website Revamp</h4>
+                            <p class="solution-subtitle">Booking Engine</p>
+                            <p class="solution-desc">Convert visitors into
+                                confirmed bookings</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="solution-title">Reputation
+                                Management</h4>
+                            <p class="solution-subtitle">Review Strategy</p>
+                            <p class="solution-desc">Build trust and improve
+                                online ratings</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="solution-title">Wedding & MICE
+                                Marketing</h4>
+                            <p class="solution-subtitle">Event Bookings</p>
+                            <p class="solution-desc">Capture high-value event
+                                business</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4 class="solution-title">Influencer Marketing</h4>
+                            <p class="solution-subtitle">Brand Awareness</p>
+                            <p class="solution-desc">Reach new audiences
+                                authentically</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h4 class="solution-title">Loyalty & Retention</h4>
+                            <p class="solution-subtitle">Repeat Business</p>
+                            <p class="solution-desc">Turn guests into brand
+                                ambassadors</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="solution-title">Yield Management</h4>
+                            <p class="solution-subtitle">Price Optimization</p>
+                            <p class="solution-desc">Maximize revenue per
+                                available room</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4 class="solution-title">AI-driven Automation</h4>
+                            <p class="solution-subtitle">Smart Marketing</p>
+                            <p class="solution-desc">Automate guest engagement
+                                and bookings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg"
+                        onclick="scrollToSection('process')">
+                        Book My Profit Velocity Call
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-5 bg-white" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">Your Profit Velocity Journey –
+                            3 Simple Steps</h2>
+                    </div>
+                </div>
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 text-center">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <div class="step-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4 class="step-title">Discover</h4>
+                            <p class="step-subtitle">Fill the Velocity
+                                Questionnaire</p>
+                            <p class="step-description">Tell us about your
+                                hotel's current challenges and goals</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <div class="step-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <h4 class="step-title">Schedule</h4>
+                            <p class="step-subtitle">Book your strategy call</p>
+                            <p class="step-description">Schedule a 30-minute
+                                call with our hotel marketing experts</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="process-step">
+                            <div class="step-number">03</div>
+                            <div class="step-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4 class="step-title">Accelerate</h4>
+                            <p class="step-subtitle">Receive your Profit
+                                Velocity Blueprint</p>
+                            <p class="step-description">Get your customized
+                                growth plan and start seeing results</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg"
+                        onclick="scrollToSection('questionnaire')">
+                        Start My 3-Step Journey
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questionnaire Section -->
+        <section id="questionnaire" class="py-5 bg-light"
+            style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">The Velocity
+                            Questionnaire</h2>
+                        <p class="section-subtitle">Answer a few quick questions
+                            so we can prepare your customised hotel
+                            growth plan.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="questionnaire-form">
+                            <form id="velocityForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Your Name
+                                            *</label>
+                                        <input type="text" class="form-control"
+                                            name="name" required
+                                            placeholder="Enter your full name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email Address
+                                            *</label>
+                                        <input type="email" class="form-control"
+                                            name="email" required
+                                            placeholder="your@email.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone Number
+                                            *</label>
+                                        <input type="tel" class="form-control"
+                                            name="phone" required
+                                            placeholder="+91 XXXXX XXXXX">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Hotel Name
+                                            *</label>
+                                        <input type="text" class="form-control"
+                                            name="hotelName" required
+                                            placeholder="Your hotel name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Location
+                                            *</label>
+                                        <input type="text" class="form-control"
+                                            name="location" required
+                                            placeholder="City, State">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Monthly
+                                            Revenue Range</label>
+                                        <select class="form-control"
+                                            name="monthlyRevenue">
+                                            <option value>Select range</option>
+                                            <option value="0-10L">₹0 - ₹10
+                                                Lakhs</option>
+                                            <option value="10-25L">₹10 - ₹25
+                                                Lakhs</option>
+                                            <option value="25-50L">₹25 - ₹50
+                                                Lakhs</option>
+                                            <option value="50L+">₹50
+                                                Lakhs+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Current
+                                            Marketing Challenges</label>
+                                        <textarea class="form-control"
+                                            name="currentChallenges" rows="4"
+                                            placeholder="Describe your biggest marketing challenges..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Primary Goals
+                                            for Next 12 Months</label>
+                                        <textarea class="form-control"
+                                            name="primaryGoals" rows="3"
+                                            placeholder="What are your main business goals?"></textarea>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit"
+                                        class="btn btn-primary btn-lg">
+                                        Submit & Schedule Call
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Section -->
+        <section id="reflection" class="py-5 bg-white" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">Hotel Reflection Form – 21
+                            Profit Questions</h2>
+                        <p class="section-subtitle">Before our call, take 5
+                            minutes to reflect on your current revenue
+                            performance.</p>
+                        <p class="text-muted small">Optional: Even if skipped,
+                            proceed to the booked call.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="reflection-form">
+                            <div class="reflection-questions"
+                                id="reflectionQuestions"></div>
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    Submit & Schedule Call
+                                <p class="mb-3">Completed: <span
+                                        id="reflectionCount">0</span>/21
+                                    questions</p>
+                                <button class="btn btn-primary"
+                                    onclick="scrollToSection('social-proof')">
+                                    Continue to Booked Call
                                 </button>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reflection Section -->
-    <section id="reflection" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Hotel Reflection Form – 21 Profit Questions</h2>
-                    <p class="section-subtitle">Before our call, take 5 minutes to reflect on your current revenue
-                        performance.</p>
-                    <p class="text-muted small">Optional: Even if skipped, proceed to the booked call.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="reflection-form">
-                        <div class="reflection-questions" id="reflectionQuestions"></div>
-                        <div class="text-center mt-4">
-                            <p class="mb-3">Completed: <span id="reflectionCount">0</span>/21 questions</p>
-                            <button class="btn btn-primary" onclick="scrollToSection('social-proof')">
-                                Continue to Booked Call
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Proof Section -->
-    <section id="social-proof" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Why 1000+ Hotels Trust Internet Moguls</h2>
+        <!-- Social Proof Section -->
+        <section id="social-proof" class="py-5 bg-light" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="section-title">Why 1000+ Hotels Trust
+                            Internet Moguls</h2>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Stats -->
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card text-center">
-                        <div class="stat-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="stat-number">₹10,000+ Crores</h3>
-                        <p class="stat-label">Revenue Generated</p>
-                        <p class="stat-desc">Total revenue generated for our hotel partners</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card text-center">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="stat-number">1000+</h3>
-                        <p class="stat-label">Hotels Served</p>
-                        <p class="stat-desc">Hotels across India trust our expertise</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card text-center">
-                        <div class="stat-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3 class="stat-number">15+</h3>
-                        <p class="stat-label">Years Experience</p>
-                        <p class="stat-desc">Years of hospitality marketing excellence</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-card text-center">
-                        <div class="stat-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3 class="stat-number">3x3x3</h3>
-                        <p class="stat-label">Growth System</p>
-                        <p class="stat-desc">Our proven hotel growth methodology</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hotel Logos -->
-            <div class="mb-5">
-                <p class="text-center text-muted mb-4">Trusted by leading hotel brands across India</p>
-                <div class="row g-3">
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo1.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo2.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo3.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo4.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo5.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo6.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo7.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo8.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo9.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo10.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo11.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo12.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo13.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo14.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo15.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo16.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-
-                            <img src="assets/images/logo17.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-
-                            <img src="assets/images/logo18.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo19.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo20.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo21.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo22.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo23.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo24.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo25.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo26.png" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo27.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <div class="logo-card text-center">
-                            <img src="assets/images/logo28.jpg" alt="" class="w-100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5">
-        <!-- Testimonials -->
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars mb-3">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Internet Moguls increased our
-                            direct bookings by 300% in just 6
-                            months. Their strategies actually work!"</p>
-                        <div class="testimonial-author">
-                            <strong>Rajesh Kumar</strong>
-                            <small class="text-primary d-block">GM, Luxury Resort
-                                Goa</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars mb-3">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"We went from 40% to 85%
-                            occupancy within a year. The ROI on their
-                            services is incredible."</p>
-                        <div class="testimonial-author">
-                            <strong>Priya Sharma</strong>
-                            <small class="text-primary d-block">Owner, Heritage
-                                Hotel Rajasthan</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars mb-3">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Their wedding marketing
-                            strategy brought us 50+ high-value events
-                            this year. Game changer!"</p>
-                        <div class="testimonial-author">
-                            <strong>Amit Patel</strong>
-                            <small class="text-primary d-block">MD, Boutique Hotels
-                                Mumbai</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Final CTA Section -->
-    <section id="final-cta" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h2 class="final-cta-title">Let's Unlock Your Hotel's Profit Velocity</h2>
-                    <p class="final-cta-subtitle">Take the first step towards increasing direct bookings, revenue, and
-                        brand value.</p>
-
-                    <div class="cta-features mb-4">
-                        <div class="row justify-content-center">
-                            <div class="col-auto">
-                                <div class="cta-feature">
-                                    <i class="fas fa-calendar text-danger me-2"></i>
-                                    <span>30-Minute Strategy Call</span>
-                                </div>
+                <!-- Stats -->
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
                             </div>
-                            <div class="col-auto">
-                                <div class="cta-feature">
-                                    <i class="fas fa-phone text-danger me-2"></i>
-                                    <span>Free Consultation</span>
-                                </div>
+                            <h3 class="stat-number">₹10,000+ Crores</h3>
+                            <p class="stat-label">Revenue Generated</p>
+                            <p class="stat-desc">Total revenue generated for our
+                                hotel partners</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <div class="col-auto">
-                                <div class="cta-feature">
-                                    <i class="fas fa-arrow-right text-danger me-2"></i>
-                                    <span>Custom Growth Plan</span>
-                                </div>
+                            <h3 class="stat-number">1000+</h3>
+                            <p class="stat-label">Hotels Served</p>
+                            <p class="stat-desc">Hotels across India trust our
+                                expertise</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label">Years Experience</p>
+                            <p class="stat-desc">Years of hospitality marketing
+                                excellence</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="stat-number">3x3x3</h3>
+                            <p class="stat-label">Growth System</p>
+                            <p class="stat-desc">Our proven hotel growth
+                                methodology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Logos -->
+                <div class="mb-5">
+                    <p class="text-center text-muted mb-4">Trusted by leading
+                        hotel brands across India</p>
+                    <div class="row g-3">
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo1.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo2.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo3.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo4.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo5.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo6.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo7.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo8.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo9.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo10.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo11.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo12.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo13.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo14.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo15.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo16.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+
+                                <img src="assets/images/logo17.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+
+                                <img src="assets/images/logo18.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo19.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo20.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo21.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo22.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo23.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo24.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo25.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo26.png" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo27.jpg" alt
+                                    class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6">
+                            <div class="logo-card text-center">
+                                <img src="assets/images/logo28.jpg" alt
+                                    class="w-100">
                             </div>
                         </div>
                     </div>
-
-                    <button class="btn btn-primary btn-lg final-cta-btn" onclick="scrollToSection('questionnaire')">
-                        Book My Profit Velocity Call Now
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </button>
-
-                    <p class="cta-disclaimer mt-3">No obligation • Free consultation • Instant booking confirmation</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h3 class="footer-title">Internet Moguls</h3>
-                    <p class="footer-desc">India's #1 Hotel Marketing Company – Owned by Hoteliers, For Hoteliers. We've
-                        helped 1000+ hotels generate ₹10,000+ Crores in revenue through our proven marketing strategies.
-                    </p>
-
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope text-danger me-2"></i>
-                            <span>hello@internetmoguls.com</span>
+        </section>
+        <section class="py-5" style="display: none;">
+            <!-- Testimonials -->
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Internet Moguls
+                                increased our
+                                direct bookings by 300% in just 6
+                                months. Their strategies actually work!"</p>
+                            <div class="testimonial-author">
+                                <strong>Rajesh Kumar</strong>
+                                <small class="text-primary d-block">GM, Luxury
+                                    Resort
+                                    Goa</small>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone text-danger me-2"></i>
-                            <span>+91 98765 43210</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"We went from 40% to 85%
+                                occupancy within a year. The ROI on their
+                                services is incredible."</p>
+                            <div class="testimonial-author">
+                                <strong>Priya Sharma</strong>
+                                <small class="text-primary d-block">Owner,
+                                    Heritage
+                                    Hotel Rajasthan</small>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt text-danger me-2"></i>
-                            <span>Mumbai, Delhi, Bangalore, Goa</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Their wedding marketing
+                                strategy brought us 50+ high-value events
+                                this year. Game changer!"</p>
+                            <div class="testimonial-author">
+                                <strong>Amit Patel</strong>
+                                <small class="text-primary d-block">MD, Boutique
+                                    Hotels
+                                    Mumbai</small>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section id="final-cta" class="py-5 bg-dark text-white"
+            style="display: none;">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="final-cta-title">Let's Unlock Your Hotel's
+                            Profit Velocity</h2>
+                        <p class="final-cta-subtitle">Take the first step
+                            towards increasing direct bookings, revenue, and
+                            brand value.</p>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+                        <div class="cta-features mb-4">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <div class="cta-feature">
+                                        <i
+                                            class="fas fa-calendar text-danger me-2"></i>
+                                        <span>30-Minute Strategy Call</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="cta-feature">
+                                        <i
+                                            class="fas fa-phone text-danger me-2"></i>
+                                        <span>Free Consultation</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="cta-feature">
+                                        <i
+                                            class="fas fa-arrow-right text-danger me-2"></i>
+                                        <span>Custom Growth Plan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4 class="footer-heading">Our Services</h4>
-                    <ul class="footer-services">
-                        <li>Direct Booking Optimization</li>
-                        <li>Revenue Management</li>
-                        <li>Social Media Marketing</li>
-                        <li>Website Development</li>
-                        <li>Reputation Management</li>
-                        <li>Wedding & MICE Marketing</li>
-                    </ul>
+                        <button class="btn btn-primary btn-lg final-cta-btn"
+                            onclick="scrollToSection('questionnaire')">
+                            Book My Profit Velocity Call Now
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+
+                        <p class="cta-disclaimer mt-3">No obligation • Free
+                            consultation • Instant booking confirmation</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="footer-bottom">
-                <p class="text-center mb-1">© 2024 Internet Moguls – India's #1 Hotel Marketing Company. All rights
-                    reserved.</p>
-                <p class="text-center text-muted small">Helping hotels unlock their profit velocity since 2009</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-5" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <h3 class="footer-title">Internet Moguls</h3>
+                        <p class="footer-desc">India's #1 Hotel Marketing
+                            Company – Owned by Hoteliers, For Hoteliers. We've
+                            helped 1000+ hotels generate ₹10,000+ Crores in
+                            revenue through our proven marketing strategies.
+                        </p>
+
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope text-danger me-2"></i>
+                                <span>hello@internetmoguls.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone text-danger me-2"></i>
+                                <span>+91 98765 43210</span>
+                            </div>
+                            <div class="contact-item">
+                                <i
+                                    class="fas fa-map-marker-alt text-danger me-2"></i>
+                                <span>Mumbai, Delhi, Bangalore, Goa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#case-studies">Case Studies</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 class="footer-heading">Our Services</h4>
+                        <ul class="footer-services">
+                            <li>Direct Booking Optimization</li>
+                            <li>Revenue Management</li>
+                            <li>Social Media Marketing</li>
+                            <li>Website Development</li>
+                            <li>Reputation Management</li>
+                            <li>Wedding & MICE Marketing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="text-center mb-1">© 2024 Internet Moguls – India's
+                        #1 Hotel Marketing Company. All rights
+                        reserved.</p>
+                    <p class="text-center text-muted small">Helping hotels
+                        unlock their profit velocity since 2009</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript -->
-    <script src="assets/js/script.js"></script>
-</body>
+        <!-- Custom JavaScript -->
+        <script src="assets/js/script.js"></script>
+    </body>
 
 </html>
