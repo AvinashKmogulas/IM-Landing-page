@@ -1,3 +1,8 @@
+// clear localStorage on page load
+window.addEventListener("load", () => {
+  localStorage.clear();
+});
+
 // Internet Moguls Landing Page JavaScript
 
 $(document).ready(function () {
@@ -22,8 +27,6 @@ $(document).ready(function () {
 
 // Initialize page functionality
 function initializePage() {
-  console.log("Internet Moguls Landing Page Loaded");
-
   // Add loading class removal after page load
   setTimeout(function () {
     $("body").removeClass("loading");
@@ -113,6 +116,18 @@ function initializeReflectionQuestions() {
   // Handle question clicks
   $(document).on("click", ".reflection-question", function () {
     const questionElement = $(this);
+    const questionText = $(this).find(".reflection-text").text().trim();
+
+    let checkedQuestions =
+      JSON.parse(localStorage.getItem("checkedQuestions")) || [];
+    if (checkedQuestions.includes(questionText)) {
+      checkedQuestions = checkedQuestions.filter((q) => q !== questionText);
+    } else {
+      checkedQuestions.push(questionText);
+    }
+
+    // Save updated array
+    localStorage.setItem("checkedQuestions", JSON.stringify(checkedQuestions));
     const checkIcon = questionElement.find(".reflection-check i");
 
     if (questionElement.hasClass("checked")) {
@@ -140,6 +155,7 @@ function initializeFormHandling() {
     // Get form data
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
+    localStorage.setItem("velocityFormData", JSON.stringify(data));
 
     // Simulate form submission
     handleFormSubmission(data);
@@ -206,7 +222,6 @@ function initializeSmoothScrolling() {
 // Global scroll to section function
 function scrollToSection(sectionId) {
   const target = $("#" + sectionId);
-  console.log("Scrolling to section:", sectionId);
   target.css("display", "block");
   if (target.length) {
     $("html, body").animate(
@@ -257,8 +272,6 @@ function validatePhone(phone) {
 
 // Analytics tracking (placeholder)
 function trackEvent(eventName, eventData = {}) {
-  console.log("Event tracked:", eventName, eventData);
-
   // Google Analytics integration would go here
   if (typeof gtag !== "undefined") {
     gtag("event", eventName, eventData);
@@ -293,6 +306,40 @@ $(document).on("click", ".challenge-card", function () {
   });
 });
 
+// select solution cards on click
+const solutionCards = document.querySelectorAll(".solution-card");
+const solutionCTA = document.getElementById("solutionCTA");
+const selectedCount = document.getElementById("solutionSelectedCount");
+console.log("Solution Cards:", selectedCount);
+solutionCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const solutionName = card
+      .querySelector(".solution-title")
+      ?.textContent.replace(/\s+/g, " ")
+      .trim();
+    if (!solutionName) return;
+
+    card.classList.toggle("selected");
+
+    let savedSolutions = JSON.parse(localStorage.getItem("solutions")) || [];
+
+    if (card.classList.contains("selected")) {
+      if (!savedSolutions.includes(solutionName)) {
+        savedSolutions.push(solutionName);
+      }
+    } else {
+      savedSolutions = savedSolutions.filter((name) => name !== solutionName);
+    }
+
+    // Update localStorage
+    localStorage.setItem("solutions", JSON.stringify(savedSolutions));
+
+    const count = savedSolutions.length;
+    selectedCount.textContent = count;
+    solutionCTA.disabled = count === 0;
+  });
+});
+
 // Performance optimization
 $(window).on("load", function () {
   // Lazy load images
@@ -323,4 +370,92 @@ $(window).on("resize", function () {
     // Desktop adjustments
     $(".hero-title").css("font-size", "4rem");
   }
+});
+
+// This script handles the challenge card selection and displays related solutions
+
+const challengeCards = document.querySelectorAll(".challenge-card");
+const challengesCTA = document.getElementById("challengesCTA");
+const selectedCountSpan = document.getElementById("selectedCount");
+const solutionsSection = document.getElementById("solutions");
+const allSolutionColumns = document.querySelectorAll(
+  "#solutionCardsWrapper > div"
+);
+
+// Challenge-to-solution mapping
+const challengeToSolutionMap = {
+  1: [1, 2],
+  2: [2],
+  3: [1, 2],
+  4: [4],
+  5: [5],
+  6: [3, 7],
+  7: [6],
+  8: [8],
+  9: [1, 3, 9],
+  10: [9, 10],
+};
+
+const selectedChallenges = new Set();
+
+// Challenge card click toggle logic
+challengeCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const id = card.dataset.challenge;
+
+    card.classList.toggle("active");
+    const paraText = card
+      .querySelector("p")
+      ?.textContent.replace(/\s+/g, " ")
+      .trim();
+    let names =
+      JSON.parse(localStorage.getItem("selectedChallengeNames")) || [];
+
+    if (selectedChallenges.has(id)) {
+      selectedChallenges.delete(id);
+      names = names.filter((name) => name !== paraText);
+    } else {
+      selectedChallenges.add(id);
+      names.push(paraText);
+    }
+
+    localStorage.setItem("selectedChallengeNames", JSON.stringify(names));
+    // Update button text and enable/disable
+    selectedCountSpan.textContent = selectedChallenges.size;
+    challengesCTA.disabled = selectedChallenges.size === 0;
+
+    if (selectedChallenges.size === 0) {
+      solutionsSection.style.display = "none";
+      allSolutionColumns.forEach((col) => {
+        col.style.display = "none";
+      });
+    }
+  });
+});
+
+// Handle "See My Solutions" button click
+challengesCTA.addEventListener("click", () => {
+  // Hide all solution cards initially
+  allSolutionColumns.forEach((col) => {
+    col.style.display = "none";
+  });
+
+  // Collect relevant solution IDs based on selected challenges
+  const solutionsToShow = new Set();
+  selectedChallenges.forEach((challengeId) => {
+    const matchingSolutions = challengeToSolutionMap[challengeId] || [];
+    matchingSolutions.forEach((solId) => solutionsToShow.add(solId));
+  });
+
+  // Show only the matched solutions
+  allSolutionColumns.forEach((col) => {
+    const solutionId = parseInt(col.dataset.solution);
+    if (solutionsToShow.has(solutionId)) {
+      col.style.display = "block";
+    }
+  });
+
+  // Display the solutions section & scroll to it
+  solutionsSection.style.display = "block";
+  scrollToSection("solutions");
 });
