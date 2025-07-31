@@ -185,7 +185,7 @@ function handleFormSubmission(data) {
 
     // Scroll to reflection section
     setTimeout(function () {
-      scrollToSection("reflection");
+      scrollToSection("socialProofSection");
     }, 2000);
   }, 2000);
 }
