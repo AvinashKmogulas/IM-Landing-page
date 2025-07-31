@@ -179,6 +179,7 @@ function handleFormSubmission(data) {
       .removeClass("btn-primary")
       .addClass("btn-success");
 
+    document.getElementById("velocityForm").reset();
     // Show success message
     showSuccessMessage();
 
