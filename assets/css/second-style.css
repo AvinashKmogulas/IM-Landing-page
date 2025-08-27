@@ -1,0 +1,203 @@
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #111827;
+  --accent: #dc2626; /* blue accent for light theme */
+  --accent2: #f3f4f6; /* subtle neutral */
+  --ring: rgba(0, 102, 204, 0.18);
+  --focus: 0 0 0 4px var(--ring);
+  --radius: 12px;
+  --border: #e6e9ee;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 20px;
+}
+header {
+  margin-bottom: 8px;
+}
+.badge {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--accent2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+h1 {
+  font-size: 26px;
+  margin: 8px 0 4px;
+  letter-spacing: 0.3px;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+form {
+  margin-top: 18px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0 20px;
+  background: #fafafa;
+}
+legend {
+  padding: 0 8px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 860px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 6px 0 6px;
+  color: var(--text);
+}
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: var(--focus);
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin: 6px 0 12px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.08);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.topnote {
+  background: transparent;
+  border: 1px dashed var(--border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+/* Print-friendly adjustments */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .card,
+  fieldset {
+    background: white;
+    color: black;
+    border: 1px solid #ddd;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+  input,
+  textarea,
+  select {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  .btn,
+  .topnote,
+  .badge {
+    display: none !important;
+  }
+  .dot {
+    background: black;
+    box-shadow: none;
+  }
+}

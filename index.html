@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet">
 
         <!-- Font Awesome Icons -->
@@ -26,6 +26,7 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/second-style.css" />
     </head>
 
     <body>
@@ -188,7 +189,7 @@
                 <div class="text-center">
                     <button id="challengesCTA" class="btn btn-primary btn-lg"
                         disabled
-                        onclick="scrollToSection('solutions')">
+                        onclick="scrollToSection('hotelAudit')">
                         See My Solutions (<span id="selectedCount">0</span>
                         selected)
                     </button>
@@ -196,6 +197,278 @@
             </div>
         </section>
 
+        <!-- Hotel Audit Intake -->
+        <section class="wrap" id="hotelAudit" class="py-5 bg-white"
+            style="display: none;">
+            <header style="text-align: center;">
+                <span class="badge">INTERNET MOGULS — HOTEL AUDIT</span>
+                <h1 style="font-size: 3rem; font-weight: bold;">Hotel Audit
+                    Intake
+                    Questionnaire</h1>
+            </header>
+
+            <form id="audit-form">
+                <!-- Section 1 -->
+                <fieldset>
+                    <legend>
+                        <span class="form-section-title">
+                            <span class="dot" aria-hidden="true"></span>
+                            Major Challenges You’re Facing
+                        </span>
+                    </legend>
+                    <label style="margin-top:12px">1. What are the top 3
+                        challenges currently limiting your
+                        hotel’s growth?</label>
+                    <p class="hint">Examples: Low occupancy, weak brand
+                        presence, OTA overdependence, low website
+                        conversions.</p>
+                    <div class="grid grid-3">
+                        <div>
+                            <label for="challenge_1">Challenge 1</label>
+                            <textarea id="challenge_1" name="challenge_1"
+                                maxlength="300"
+                                placeholder="Describe challenge #1"
+                                required></textarea>
+                        </div>
+                        <div>
+                            <label for="challenge_2">Challenge 2</label>
+                            <textarea id="challenge_2" name="challenge_2"
+                                maxlength="300"
+                                placeholder="Describe challenge #2"
+                                required></textarea>
+                        </div>
+                        <div>
+                            <label for="challenge_3">Challenge 3</label>
+                            <textarea id="challenge_3" name="challenge_3"
+                                maxlength="300"
+                                placeholder="Describe challenge #3"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <label style="margin-top:12px">2. Which platforms or areas
+                        do you feel are underperforming the most?</label>
+                    <p class="hint">Examples: Instagram, Brand Website, Booking
+                        Engine, SEO, Google Ads, OTAs.</p>
+                    <div class="grid grid-3">
+                        <input type="text" name="underperforming_area_1"
+                            placeholder="e.g., Instagram" />
+                        <input type="text" name="underperforming_area_2"
+                            placeholder="e.g., Booking Engine" />
+                        <input type="text" name="underperforming_area_3"
+                            placeholder="e.g., SEO / Google Ads" />
+                    </div>
+
+                    <label style="margin-top:12px">3.Have there been recent
+                        changes in guest behavior or competition that you’re
+                        struggling to adapt to?</label>
+                    <p class="hint">Optional insights around pricing wars,
+                        review scores, seasonality shifts, etc.
+                    </p>
+                    <div class="grid grid-3">
+                        <input type="text" name="insight_1"
+                            placeholder="Insight 1" />
+                        <input type="text" name="insight_2"
+                            placeholder="Insight 2" />
+                        <input type="text" name="insight_3"
+                            placeholder="Insight 3" />
+                    </div>
+                </fieldset>
+
+                <!-- Section 2 -->
+                <fieldset>
+                    <legend><span class="form-section-title">
+                            <span class="dot" aria-hidden="true"></span>
+                            Strategic Priorities (Next 6–12 months)
+                        </span>
+                    </legend>
+
+                    <label style="font-size: 12px">1. What 3 outcomes or KPIs do
+                        you want to achieve in the next 6–12 months?</label>
+                    <p class="hint">Examples: Increase direct bookings by 30%,
+                        reduce OTA commissions, grow wedding queries.</p>
+                    <div class="grid grid-3">
+                        <div>
+                            <label for="goal_1">Goal 1 / KPI</label>
+                            <input id="goal_1" name="goal_1" type="text"
+                                placeholder="Outcome or KPI #1" required />
+                        </div>
+                        <div>
+                            <label for="goal_2">Goal 2 / KPI</label>
+                            <input id="goal_2" name="goal_2" type="text"
+                                placeholder="Outcome or KPI #2" required />
+                        </div>
+                        <div>
+                            <label for="goal_3">Goal 3 / KPI</label>
+                            <input id="goal_3" name="goal_3" type="text"
+                                placeholder="Outcome or KPI #3" required />
+                        </div>
+                    </div>
+
+                    <label style="margin-top:12px">2. Which 3 guest segments or
+                        business verticals are your primary growth
+                        focus?</label>
+                    <p class="hint">Examples: Corporate stays, destination
+                        weddings, weekend leisure, MICE.</p>
+                    <div class="grid grid-3">
+                        <input type="text" name="focus_1"
+                            placeholder="e.g., Corporate Stays" />
+                        <input type="text" name="focus_2"
+                            placeholder="e.g., Destination Weddings" />
+                        <input type="text" name="focus_3"
+                            placeholder="e.g., Weekend Leisure / MICE" />
+                    </div>
+
+                    <label style="margin-top:12px">3. Which marketing channels
+                        are you most interested in investing in or
+                        improving?</label>
+                    <p class="hint">Examples: SEO, Paid Ads, Social Media,
+                        Influencer Marketing, CRM</p>
+                    <div class="grid grid-3">
+                        <input type="text" name="channel_1"
+                            placeholder="e.g., SEO" />
+                        <input type="text" name="channel_2"
+                            placeholder="e.g., Paid Ads" />
+                        <input type="text" name="channel_3"
+                            placeholder="e.g., Social / CRM / Influencers" />
+                    </div>
+                </fieldset>
+
+                <!-- Section 3 -->
+                <fieldset>
+                    <legend>
+                        <span class="form-section-title">
+                            <span class="dot" aria-hidden="true"></span>
+                            Expectations from Internet Moguls
+                        </span>
+                    </legend>
+                    <label style="font-size: 12px;">Which 3 areas do you want us
+                        to take over or improve immediately?</label>
+                    <p class="hint">Examples: OTA rate optimization, Google Ads,
+                        Instagram growth, website lead tracking.</p>
+                    <div class="grid grid-3">
+                        <div>
+                            <label for="expectation_1">Expectation 1</label>
+                            <input id="expectation_1" name="expectation_1"
+                                type="text"
+                                placeholder="Area to improve/take over" />
+                        </div>
+                        <div>
+                            <label for="expectation_2">Expectation 2</label>
+                            <input id="expectation_2" name="expectation_2"
+                                type="text"
+                                placeholder="Area to improve/take over" />
+                        </div>
+                        <div>
+                            <label for="expectation_3">Expectation 3</label>
+                            <input id="expectation_3" name="expectation_3"
+                                type="text"
+                                placeholder="Area to improve/take over" />
+                        </div>
+                    </div>
+
+                    <label style="margin-top:12px">In the next 90 days, what
+                        improvements would you like to see if we do our job
+                        well?</label>
+                    <div class="grid grid-3">
+                        <input type="text" name="ninety_outcome_1"
+                            placeholder="Outcome 1" />
+                        <input type="text" name="ninety_outcome_2"
+                            placeholder="Outcome 2" />
+                        <input type="text" name="ninety_outcome_3"
+                            placeholder="Outcome 3" />
+                    </div>
+
+                    <label style="margin-top:12px">What are 3 qualities you’re
+                        expecting from a long-term marketing partner like
+                        us?</label>
+                    <p class="hint">Examples: Fast execution, data transparency,
+                        hotel industry expertise, 24x7 availability</p>
+                    <div class="grid grid-3">
+                        <input type="text" name="value_1"
+                            placeholder="e.g., Fast execution" />
+                        <input type="text" name="value_2"
+                            placeholder="e.g., Data transparency" />
+                        <input type="text" name="value_3"
+                            placeholder="e.g., Hotel expertise" />
+                    </div>
+                </fieldset>
+
+                <!-- Optional Performance Inputs -->
+                <fieldset>
+                    <legend>
+                        <span class="form-section-title">
+                            <span class="dot" aria-hidden="true"></span>
+                            Optional Performance Inputs (for deeper audits)
+                        </span>
+                    </legend>
+                    <p class="hint">Kindly provide any details you may have
+                        readily available:</p>
+                    <div class="grid grid-3">
+                        <div>
+                            <label for="occupancy">Average Monthly Occupancy
+                                (%)</label>
+                            <input id="occupancy" name="occupancy" type="number"
+                                min="0" max="100" step="1"
+                                placeholder="e.g., 72" />
+                        </div>
+                        <div>
+                            <label for="adr">ADR — Average Daily Rate</label>
+                            <input id="adr" name="adr" type="number" min="0"
+                                step="0.01" placeholder="e.g., 6500" />
+                        </div>
+                        <div>
+                            <label for="budget">Monthly Digital Marketing
+                                Budget</label>
+                            <input id="budget" name="budget" type="number"
+                                min="0" step="1" placeholder="e.g., 150000" />
+                        </div>
+                        <div>
+                            <label for="booking_engine">Booking Engine
+                                Used</label>
+                            <input id="booking_engine" name="booking_engine"
+                                type="text"
+                                placeholder="e.g., STAAH, RateTiger" />
+                        </div>
+                        <div>
+                            <label for="cms">Website CMS</label>
+                            <input id="cms" name="cms" type="text"
+                                placeholder="e.g., WordPress, Laravel" />
+                        </div>
+                        <div>
+                            <label for="otas">Active OTA Platforms</label>
+                            <input id="otas" name="otas" type="text"
+                                placeholder="e.g., Booking.com, MakeMyTrip, Agoda" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-3" style="margin-top:12px">
+                        <div>
+                            <label for="comp_1">Top Competitor #1</label>
+                            <input id="comp_1" name="comp_1" type="text"
+                                placeholder="Hotel / URL" />
+                        </div>
+                        <div>
+                            <label for="comp_2">Top Competitor #2</label>
+                            <input id="comp_2" name="comp_2" type="text"
+                                placeholder="Hotel / URL" />
+                        </div>
+                        <div>
+                            <label for="comp_3">Top Competitor #3</label>
+                            <input id="comp_3" name="comp_3" type="text"
+                                placeholder="Hotel / URL" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="text-center mt-4">
+                    <button type="submit"
+                        class="btn btn-primary btn-lg">
+                        Submit Questionnaire
+                    </button>
+                </div>
+            </form>
+        </section>
         <!-- Solutions Section -->
         <section id="solutions" class="py-5 bg-light" style="display: none;">
             <div class="container">
@@ -466,7 +739,7 @@
 
         <!-- Social Proof Section -->
         <div id="socialProofSection" style="display: none;">
-            <section id="reflection" class="py-5 bg-white">
+            <!-- <section id="reflection" class="py-5 bg-white">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto text-center mb-5">
@@ -497,7 +770,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Process Section -->
             <section id="process" class="py-5 bg-white">
                 <div class="container">

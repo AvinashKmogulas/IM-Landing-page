@@ -159,7 +159,214 @@ function initializeFormHandling() {
 
     // Simulate form submission
     handleFormSubmission(data);
+
+    // export data into google sheet
+    exportChallengesSolutions();
+    exportIntakeQuestionnaire();
+    exportVelocityFormData();
   });
+
+  $("#audit-form").on("submit", function (e) {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    localStorage.setItem("auditFormData", JSON.stringify(data));
+
+    // Simulate form submission
+    handleAuditFormSubmission(data);
+  });
+}
+
+// export data in google storage
+function exportChallengesSolutions() {
+  let challenge =
+    JSON.parse(localStorage.getItem("selectedChallengeNames")) || [];
+  let solution = JSON.parse(localStorage.getItem("solutions")) || [];
+
+  let fd = new FormData();
+  fd.append("Challenges", challenge);
+  fd.append("Solutions", solution);
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbw_ePo1K2RSxBYzFroznq1Am8o9BG83p6j_EmdaRfvveCkuY8vAvqtKH5YnOctx-V5Z-A/exec",
+    {
+      method: "POST",
+      body: fd,
+    }
+  )
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Data saved:", response);
+    })
+    .catch((err) => console.error("Error:", err));
+}
+
+function exportIntakeQuestionnaire() {
+  let auditFormData = JSON.parse(localStorage.getItem("auditFormData")) || {};
+
+  let fd = new FormData();
+
+  fd.append("Challange1", auditFormData.challenge_1 || "");
+  fd.append("Challange2", auditFormData.challenge_2 || "");
+  fd.append("Challange3", auditFormData.challenge_3 || "");
+
+  fd.append(
+    "Platforms",
+    [auditFormData.channel_1, auditFormData.channel_2, auditFormData.channel_3]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Changes_in_guest_behavior",
+    [auditFormData.insight_1, auditFormData.insight_2, auditFormData.insight_3]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Outcomes",
+    [
+      auditFormData.ninety_outcome_1,
+      auditFormData.ninety_outcome_2,
+      auditFormData.ninety_outcome_3,
+    ]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Primary Growth",
+    [auditFormData.goal_1, auditFormData.goal_2, auditFormData.goal_3]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Marketing Channels",
+    [
+      auditFormData.expectation_1,
+      auditFormData.expectation_2,
+      auditFormData.expectation_3,
+    ]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Areas",
+    [
+      auditFormData.underperforming_area_1,
+      auditFormData.underperforming_area_2,
+      auditFormData.underperforming_area_3,
+    ]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append(
+    "Improvements",
+    [auditFormData.value_1, auditFormData.value_2, auditFormData.value_3]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fd.append("Qualities", [
+    [auditFormData.value_1, auditFormData.value_2, auditFormData.value_3]
+      .filter(Boolean)
+      .join(", "),
+  ]);
+
+  fd.append("Average Monthly Occupancy", auditFormData.occupancy || "");
+  fd.append("Average Daily Rate", auditFormData.adr || "");
+  fd.append("Monthly Digital Marketing Budget", auditFormData.budget || "");
+  fd.append("Booking Engine Used", auditFormData.booking_engine || "");
+  fd.append("Website CMS", auditFormData.cms || "");
+  fd.append("Active OTA Platforms", auditFormData.otas || "");
+
+  fd.append(
+    "Top Competitors",
+    [auditFormData.comp_1, auditFormData.comp_2, auditFormData.comp_3]
+      .filter(Boolean)
+      .join(", ")
+  );
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbyDv7D567WJabfEBc4FJwN-3qwYdySppC0-rwFPTVPMYJvvxyUmn-GmvWNfDNyf6q7Mag/exec",
+    {
+      method: "POST",
+      body: fd,
+    }
+  )
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Data saved:", response);
+    })
+    .catch((err) => console.error("Error:", err));
+}
+
+// velocityFormData
+function exportVelocityFormData() {
+  let velocityFormData =
+    JSON.parse(localStorage.getItem("velocityFormData")) || {};
+  let fd = new FormData();
+  fd.append("Name", velocityFormData.name || "");
+  fd.append("Email", velocityFormData.email || "");
+  fd.append("Phone", velocityFormData.phone || "");
+  fd.append("Hotel Name", velocityFormData.hotelName || "");
+  fd.append("Location", velocityFormData.location || "");
+  fd.append("Monthly Revenue Range", velocityFormData.monthlyRevenue || "");
+  fd.append(
+    "Current Marketing Challenges",
+    velocityFormData.currentChallenges || ""
+  );
+  fd.append(
+    "Primary Goals for Next 12 Months",
+    velocityFormData.primaryGoals || ""
+  );
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbwN-2E6vEjZQHxH0UUJTe9N-QcFVW_Ys4Qf5jPxzDAXwVmbqTDw6B4s3WaLTBXGJePbhg/exec",
+    {
+      method: "POST",
+      body: fd,
+    }
+  )
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Data saved:", response);
+    })
+    .catch((err) => console.error("Error:", err));
+}
+
+// audit form submission
+function handleAuditFormSubmission(data) {
+  const submitButton = $('#auditForm button[type="submit"]');
+  const originalText = submitButton.html();
+
+  submitButton
+    .html('<i class="fas fa-spinner fa-spin"></i> Submitting...')
+    .prop("disabled", true);
+
+  // Simulate API call
+  setTimeout(function () {
+    // Success state
+    submitButton
+      .html('<i class="fas fa-check"></i> Submitted Successfully!')
+      .removeClass("btn-primary")
+      .addClass("btn-success");
+
+    document.getElementById("audit-form").reset();
+    // Show success message
+    showSuccessMessage("auditForm");
+
+    // Scroll to reflection section
+    setTimeout(function () {
+      scrollToSection("solutions");
+    }, 2000);
+  }, 2000);
 }
 
 function handleFormSubmission(data) {
@@ -181,7 +388,7 @@ function handleFormSubmission(data) {
 
     document.getElementById("velocityForm").reset();
     // Show success message
-    showSuccessMessage();
+    showSuccessMessage("velocityForm");
 
     // Scroll to reflection section
     setTimeout(function () {
@@ -190,17 +397,32 @@ function handleFormSubmission(data) {
   }, 2000);
 }
 
-function showSuccessMessage() {
-  const successHtml = `
-        <div class="alert alert-success mt-4" role="alert">
-            <h4 class="alert-heading"><i class="fas fa-check-circle"></i> Thank You!</h4>
-            <p>Your questionnaire has been submitted successfully. We'll prepare your customized hotel growth plan and contact you within 24 hours.</p>
-            <hr>
-            <p class="mb-0">Please complete the reflection questions below to help us prepare even better recommendations for your call.</p>
-        </div>
-    `;
+function showSuccessMessage(id) {
+  if (id == "velocityForm") {
+    const successHtml = `
+          <div class="alert alert-success mt-4" role="alert">
+              <h4 class="alert-heading"><i class="fas fa-check-circle"></i> Thank You!</h4>
+              <p>Your questionnaire has been submitted successfully. We'll prepare your customized hotel growth plan and contact you within 24 hours.</p>
+              <hr>
+              <p class="mb-0">Please complete the reflection questions below to help us prepare even better recommendations for your call.</p>
+          </div>
+      `;
 
-  $("#velocityForm").after(successHtml);
+    $("#velocityForm").after(successHtml);
+  }
+
+  if (id == "auditForm") {
+    const successHtml = `
+          <div class="alert alert-success mt-4" role="alert">
+              <h4 class="alert-heading"><i class="fas fa-check-circle"></i> Thank You!</h4>
+              <p>Your Audit Intake Questionnaire has been submitted successfully. We'll prepare your customized hotel growth plan and contact you within 24 hours.</p>
+              <hr>
+              <p class="mb-0">Please select the solutions to help us prepare even better recommendations for your call.</p>
+          </div>
+      `;
+
+    $("#audit-form").after(successHtml);
+  }
 }
 
 // Smooth scrolling functionality
@@ -457,6 +679,6 @@ challengesCTA.addEventListener("click", () => {
   });
 
   // Display the solutions section & scroll to it
-  solutionsSection.style.display = "block";
-  scrollToSection("solutions");
+  solutionsSection.style.display = "none";
+  scrollToSection("hotelAudit");
 });
